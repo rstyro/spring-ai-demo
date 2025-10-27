@@ -1,0 +1,41 @@
+server:
+  port: 8102
+
+spring:
+  application:
+    name: mcp-client-annotation
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        options:
+          model: llama3.2
+
+    mcp:
+      client:
+        enabled: true
+        type: SYNC
+        initialized: false
+        name: spring-ai-mcp-client-annotation
+        request-timeout: 30s
+        annotation-scanner:
+          enabled: true
+        toolcallback:
+          enabled: true
+#        sse:
+#          connections:
+#            fortuneServer:
+#              url: http://localhost:8101
+        streamable-http:
+          connections:
+            fortuneServer:
+              url: http://localhost:8101
+
+
+
+
+logging:
+  level:
+    root: info
+    org.springframework.ai: debug
+    top.lrshuai.ai: info

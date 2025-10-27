@@ -1,0 +1,29 @@
+server:
+  port: 8101
+
+spring:
+  application:
+    name: mcp-server-annotation
+
+  ai:
+    mcp:
+      server:
+        name: fortuneServer
+        annotation-scanner:
+          enabled: true
+        version: 1.0.0
+        type: SYNC
+        protocol: STREAMABLE  # SSE or STDIO, STREAMABLE
+        streamable-http:
+          mcp-endpoint: /mcp
+        capabilities:
+          tools: true
+          logging: true
+
+
+logging:
+  level:
+    root: info
+    org.springframework.ai: debug
+    io.modelcontextprotocol: debug
+    top.lrshuai.ai: info
