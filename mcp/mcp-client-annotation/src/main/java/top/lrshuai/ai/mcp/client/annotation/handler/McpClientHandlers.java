@@ -12,13 +12,12 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-public class ClientHandlers {
+public class McpClientHandlers {
 
-    private final Logger logger = LoggerFactory.getLogger(ClientHandlers.class);
+    private final Logger logger = LoggerFactory.getLogger(McpClientHandlers.class);
 
     @McpLogging(clients = "fortuneServer")
     public void handleLogging(McpSchema.LoggingMessageNotification notification) {
-        System.out.println("notification="+notification);
         switch (notification.level()) {
             case ERROR:
                 logger.error("[MCP] {} - {}", notification.logger(), notification.data());

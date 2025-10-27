@@ -17,6 +17,7 @@ spring:
         type: SYNC
         initialized: false
         name: spring-ai-mcp-client-annotation
+        root-change-notification: true
         request-timeout: 30s
         annotation-scanner:
           enabled: true
@@ -29,13 +30,12 @@ spring:
         streamable-http:
           connections:
             fortuneServer:
-              url: http://localhost:8101
-
-
+              url: http://127.0.0.1:8101
 
 
 logging:
   level:
     root: info
     org.springframework.ai: debug
+    io.modelcontextprotocol: debug
     top.lrshuai.ai: info

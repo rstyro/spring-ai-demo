@@ -4,6 +4,8 @@ import cn.hutool.core.util.IdUtil;
 import cn.hutool.core.util.StrUtil;
 import io.modelcontextprotocol.server.McpSyncServerExchange;
 import io.modelcontextprotocol.spec.McpSchema;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springaicommunity.mcp.annotation.McpProgressToken;
 import org.springaicommunity.mcp.annotation.McpTool;
 import org.springaicommunity.mcp.annotation.McpToolParam;
@@ -16,6 +18,9 @@ import java.util.Random;
  */
 @Service
 public class FortuneTellingTools {
+
+    private final Logger log = LoggerFactory.getLogger(FortuneTellingTools.class);
+
 
     private final Random random = new Random();
 
@@ -60,7 +65,7 @@ public class FortuneTellingTools {
             McpSyncServerExchange exchange,
             @McpToolParam(description = "你的名字或昵称", required = false) String name) {
 
-        System.out.println(progressToken + "名字=" + name);
+        log.info("token={},name={}", progressToken, name);
 
         // Send logging notification
         exchange.loggingNotification(McpSchema.LoggingMessageNotification.builder()
