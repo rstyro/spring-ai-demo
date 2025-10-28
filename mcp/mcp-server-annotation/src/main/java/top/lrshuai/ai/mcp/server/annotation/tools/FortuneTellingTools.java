@@ -7,7 +7,7 @@ import io.modelcontextprotocol.spec.McpSchema;
 import lombok.extern.slf4j.Slf4j;
 import org.springaicommunity.mcp.annotation.McpProgressToken;
 import org.springaicommunity.mcp.annotation.McpTool;
-import org.springaicommunity.mcp.annotation.McpToolParam;
+import org.springframework.ai.tool.annotation.Tool;
 import org.springframework.stereotype.Service;
 
 import java.util.Random;
@@ -21,11 +21,15 @@ public class FortuneTellingTools {
 
     private final Random random = new Random();
 
+    /**
+     * 测算今日运势
+     *
+     * @param exchange MCP 服务器交换对象，用于发送通知
+     * @param progressToken 进度令牌，用于跟踪长时间运行的操作
+     * @return 格式化的运势报告字符串
+     */
     @McpTool(name = "daily_fortune", description = "测算今日运势")
-    public String getDailyFortune(
-            McpSyncServerExchange exchange,
-            @McpProgressToken String progressToken) {
-
+    public String getDailyFortune(McpSyncServerExchange exchange,@McpProgressToken String progressToken) {
         log.info("token={}", progressToken);
 
         // 发送日志通知
@@ -66,4 +70,10 @@ public class FortuneTellingTools {
                 luckDescriptions[luckIndex][0], emojis[luckIndex]);
     }
 
+    @McpTool(name = "luckNumber",description = "获取幸运数字")
+    public String luckNumber(){
+        int num = random.nextInt(100);
+        log.info("幸运数字num={}", num);
+        return "您的幸运数字为:%s".formatted(num);
+    }
 }

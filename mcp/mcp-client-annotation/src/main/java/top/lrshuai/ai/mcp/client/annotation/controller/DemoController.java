@@ -26,7 +26,7 @@ public class DemoController {
     public DemoController (OllamaChatModel chatModel) {
 
         this.chatClient = ChatClient.builder(chatModel)
-                .defaultSystem("回答以下问题结果都用中文回答，如果你不知道答案，请只回复‘我不知道’")
+                .defaultSystem("回答以下问题结果都用中文回答,不要包含任何一个英文，如果你不知道答案，请只回复‘我不知道’")
                 // 打印日志
                 .defaultAdvisors(new SimpleLoggerAdvisor())
               .build();
