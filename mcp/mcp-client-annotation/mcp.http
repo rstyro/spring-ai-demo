@@ -1,8 +1,10 @@
 
 ### 普通问答
+# @timeout 300
 GET http://127.0.0.1:8102/client/ask?question=我的今日运势如何
 
 ### MCP问答
+# @timeout 300
 GET http://127.0.0.1:8102/client/askByTool?question=我的今日运势如何
 
 

@@ -1,0 +1,25 @@
+### rag简单示例
+# @timeout 600
+GET http://127.0.0.1:8104/rag/simple?prompt=小酌一杯是什么行业黑话
+
+### 英文测试
+# @timeout 600
+GET http://127.0.0.1:8104/rag/simple?prompt=What are the game slang
+
+
+### 自定义RAG流程
+# @timeout 600
+GET http://127.0.0.1:8104/rag/custom?prompt=小酌一杯是什么行业黑话
+
+
+
+### 相似度检索
+GET http://127.0.0.1:8104/rag/search?query=小酌一杯是什么黑话&topK=10
+
+
+
+### ragModule
+GET http://127.0.0.1:8104/ragModule/ragAdvisor?query=我什么时候会发财
+
+### ragModule 添加文档
+GET http://127.0.0.1:8104/ragModule/add
