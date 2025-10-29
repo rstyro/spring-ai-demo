@@ -33,11 +33,12 @@
 
     </properties>
 
-     <modules>
-	   <module>commons</module>
-	   <module>mcp</module>
+    <modules>
+        <module>commons</module>
+        <module>mcp</module>
+        <module>embedding</module>
 
-     </modules>
+    </modules>
 
     <!-- 依赖声明 -->
     <dependencyManagement>
@@ -92,7 +93,6 @@
         </dependencies>
 
     </dependencyManagement>
-
 
 
     <repositories>

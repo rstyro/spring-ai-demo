@@ -4,23 +4,17 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>top.lrshuai.ai</groupId>
-        <artifactId>mcp</artifactId>
+        <artifactId>spring-ai-demo</artifactId>
         <version>${revision}</version>
     </parent>
-    <artifactId>mcp-client-annotation</artifactId>
-    <name>mcp-client-annotation</name>
-    <description>mcp-client-annotation</description>
+    <artifactId>embedding</artifactId>
+    <name>embedding</name>
+    <description>embedding</description>
 
     <dependencies>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.ai</groupId>
-            <artifactId>spring-ai-starter-mcp-client</artifactId>
         </dependency>
 
         <dependency>
@@ -33,7 +27,6 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
 
     <build>

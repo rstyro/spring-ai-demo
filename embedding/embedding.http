@@ -1,0 +1,8 @@
+
+### 文本转向量
+GET http://127.0.0.1:8103/embedding/textToVector?message=我的今日运势如何
+
+
+### 文本转向量2
+GET http://127.0.0.1:8103/embedding/textToVector2?message=我的今日运势如何
+
