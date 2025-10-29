@@ -10,7 +10,6 @@ spring:
       chat:
         options:
           model: llama3.2
-
     mcp:
       client:
         enabled: true
