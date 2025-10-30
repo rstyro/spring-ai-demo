@@ -37,6 +37,7 @@
         <module>commons</module>
         <module>mcp</module>
         <module>embedding</module>
+        <module>vector</module>
         <module>rag</module>
 
     </modules>

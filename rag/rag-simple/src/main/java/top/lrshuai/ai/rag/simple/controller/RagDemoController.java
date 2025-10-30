@@ -81,7 +81,7 @@ public class RagDemoController {
         response.setCharacterEncoding("UTF-8");
         log.info("开始RAG增加模式");
 
-        // 1、多语言检索 将中文查询翻译为向量库支持的语言
+        // 1、TranslationQueryTransformer多语言检索 将中文查询翻译为向量库支持的语言。也可以使用RewriteQueryTransformer让大模型重写查询
         TranslationQueryTransformer translationQueryTransformer = TranslationQueryTransformer.builder()
                 .chatClientBuilder(chatClientBuilder)
                 .targetLanguage("English")

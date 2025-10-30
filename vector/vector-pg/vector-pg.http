@@ -1,0 +1,9 @@
+### 向量库添加数据
+# @timeout 600
+GET http://127.0.0.1:8106/vectorPg/add
+
+
+
+### 相似度检索
+GET http://127.0.0.1:8106/vectorPg/search?query=电影台词
+

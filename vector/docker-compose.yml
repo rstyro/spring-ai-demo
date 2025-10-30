@@ -1,0 +1,46 @@
+name: vector-env
+services:
+  # redis stack
+  redis-stack:
+    image: redis/redis-stack:latest
+    restart: unless-stopped
+    container_name: redis-stack
+    ports:
+      - "16379:6379"  # Redis 服务端口
+      - "8001:8001"   # RedisInsight Web界面端口
+    environment:
+      - REDIS_ARGS=--requirepass abcsee2see
+    volumes:
+      - ./redis-data:/data  # 数据持久化目录
+    networks:
+      - vector-network
+
+  # postgresql 数据库
+  postgres:
+    image: pgvector/pgvector:pg15
+    restart: unless-stopped
+    container_name: postgres-vector
+    environment:
+      POSTGRES_DB: vector_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: vector123456
+      POSTGRES_INITDB_ARGS: "--encoding=UTF8 --lc-collate=C --lc-ctype=C"
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+    networks:
+      - vector-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d vector_db"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+volumes:
+  redis-data:
+  postgres-data:
+
+networks:
+  vector-network:
+    driver: bridge

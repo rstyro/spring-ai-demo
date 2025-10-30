@@ -1,0 +1,29 @@
+server:
+  port: 8105
+
+spring:
+  application:
+    name: vector-redis
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        options:
+          model: llama3.2
+      embedding:
+        model: bge-m3
+    vectorstore:
+      redis:
+        initialize-schema: true
+        index-name: spring-ai-index
+        prefix: embedding
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 16379
+      password: abcsee2see
+
+
+logging:
+  level:
+    root: info
