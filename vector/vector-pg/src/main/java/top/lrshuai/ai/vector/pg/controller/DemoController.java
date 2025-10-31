@@ -52,7 +52,7 @@ public class DemoController {
         } else {
             log.info("没有需要添加的新文档");
         }
-        return R.ok();
+        return R.ok(filteredDocuments.size());
     }
 
     private List<Document> filterDuplicateDocuments(List<Document> newDocuments) {
@@ -86,6 +86,17 @@ public class DemoController {
         log.info("执行相似性搜索，query={},topK={}", query, topK);
         SearchRequest searchRequest = SearchRequest.builder().query(query).topK(topK).build();
         return vectorStore.similaritySearch(searchRequest);
+    }
+
+    /**
+     * 删除文档
+     * @param id
+     * @return
+     */
+    @GetMapping("/del")
+    public R del(String id) {
+        vectorStore.delete(List.of(id));
+        return R.ok();
     }
 
 }

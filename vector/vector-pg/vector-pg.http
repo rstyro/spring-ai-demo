@@ -2,8 +2,8 @@
 # @timeout 600
 GET http://127.0.0.1:8106/vectorPg/add
 
-
-
 ### 相似度检索
-GET http://127.0.0.1:8106/vectorPg/search?query=电影台词
+GET http://127.0.0.1:8106/vectorPg/search?query=处女座
 
+### 删除文档
+GET http://127.0.0.1:8106/vectorPg/del?id=2c8c71a2-5c4e-493d-91a5-157f5b8d381c
