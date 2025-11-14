@@ -14,6 +14,7 @@ Spring AI 例子
 - **commons** 公共包，通用接口返回和全局异常捕获，可不要
 - **chat** 聊天模块
     - **chat-ollama** 基于Ollama的聊天demo
+    - **chat-deepseek** 基于Deepseek的聊天demo
 - **embedding** 嵌入模型-文本转向量
 - **vector** 向量存储库相关
     - **vector-pg** 向量存贮到pgsql

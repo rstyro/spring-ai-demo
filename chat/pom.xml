@@ -15,6 +15,7 @@
 
     <modules>
         <module>chat-ollama</module>
+        <module>chat-deepseek</module>
     </modules>
 
 </project>

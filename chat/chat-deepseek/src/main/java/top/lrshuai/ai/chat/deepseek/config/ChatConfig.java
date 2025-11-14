@@ -1,4 +1,4 @@
-package top.lrshuai.ai.chat.ollama.config;
+package top.lrshuai.ai.chat.deepseek.config;
 
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;
