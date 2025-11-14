@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>top.lrshuai.ai</groupId>
+    <groupId>top.lrshuai.springai</groupId>
     <artifactId>common-pom</artifactId>
     <name>common-pom</name>
     <version>${revision}</version>
@@ -16,7 +16,7 @@
         <dependencies>
             <!-- 通用核心 -->
             <dependency>
-                <groupId>top.lrshuai.ai</groupId>
+                <groupId>top.lrshuai.springai</groupId>
                 <artifactId>common-core</artifactId>
                 <version>${revision}</version>
             </dependency>

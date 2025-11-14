@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>top.lrshuai.ai</groupId>
+		<groupId>top.lrshuai.springai</groupId>
 		<artifactId>vector</artifactId>
 		<version>${revision}</version>
 	</parent>
@@ -13,7 +13,7 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>top.lrshuai.ai</groupId>
+			<groupId>top.lrshuai.springai</groupId>
 			<artifactId>common-core</artifactId>
 		</dependency>
 

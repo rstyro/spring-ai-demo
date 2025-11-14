@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>top.lrshuai.ai</groupId>
+    <groupId>top.lrshuai.springai</groupId>
     <artifactId>spring-ai-demo</artifactId>
     <version>${revision}</version>
     <packaging>pom</packaging>
@@ -35,6 +35,7 @@
 
     <modules>
         <module>commons</module>
+        <module>chat</module>
         <module>mcp</module>
         <module>embedding</module>
         <module>vector</module>
@@ -70,7 +71,7 @@
             </dependency>
 
             <dependency>
-                <groupId>top.lrshuai.ai</groupId>
+                <groupId>top.lrshuai.springai</groupId>
                 <artifactId>common-pom</artifactId>
                 <version>${revision}</version>
                 <type>pom</type>
