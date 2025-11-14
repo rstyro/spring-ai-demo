@@ -16,8 +16,8 @@ Spring AI 例子
     - **chat-ollama** 基于Ollama的聊天demo
 - **embedding** 嵌入模型-文本转向量
 - **vector** 向量存储库相关
-    - **vector-pg** pgvector实现demo
-    - **vector-redis** 向量存贮到redis-stach的demo
+    - **vector-pg** 向量存贮到pgsql
+    - **vector-redis** 向量存贮到redis-stack的demo
 - **rag**  RAG相关demo
     - **rag-simple**  这个RAG简单示例与实现多流程实例
 - **mcp** MCP相关demo

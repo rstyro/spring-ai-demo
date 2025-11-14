@@ -1,0 +1,14 @@
+
+### model 简单对话
+GET http://127.0.0.1:8107/chat/model/chat?prompt=
+
+### model 流式对话
+GET http://127.0.0.1:8107/chat/model/stream?prompt=
+
+### client 简单对话
+GET http://127.0.0.1:8107/chat/client/chat?prompt=
+
+### client 流式对话
+GET http://127.0.0.1:8107/chat/client/stream?prompt=
+
+
